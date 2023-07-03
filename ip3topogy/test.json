@@ -1,0 +1,36 @@
+{
+    "version": "0.3.0",
+    "scope": "project",
+    "selectedTree": "1f3bf1c1-9b9d-4f33-839f-ba03af5f7f4e",
+    "trees": [
+    ],
+    "custom_nodes": [
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Вопрос",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Ответ",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Тест",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      }
+    ]
+  }
