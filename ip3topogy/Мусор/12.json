@@ -1,0 +1,30 @@
+{
+    "name": "12",
+    "description": "",
+    "data": {
+        "version": "0.3.0",
+        "scope": "project",
+        "selectedTree": "6d866a6b-7001-44ec-8e0a-c1c1cbb980de",
+        "trees": [
+            {
+                "version": "0.3.0",
+                "scope": "tree",
+                "id": "6d866a6b-7001-44ec-8e0a-c1c1cbb980de",
+                "title": "Tree",
+                "description": "",
+                "root": null,
+                "properties": {},
+                "nodes": {},
+                "display": {
+                    "camera_x": 667,
+                    "camera_y": 380.5,
+                    "camera_z": 1,
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        ],
+        "custom_nodes": []
+    },
+    "path": ""
+}

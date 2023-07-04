@@ -1,3 +1,5 @@
+import { IdgenService } from '../services/idgen.service';
+
 export class Node {
     id:             string;
     name:           string;
@@ -8,7 +10,8 @@ export class Node {
     children:       string[];
 
     constructor() {
-        this.id = 'халлоу';
+        let id = new IdgenService;
+        this.id = id.id;
         this.name = 'имя';
         this.title = '',
         this.description = '',

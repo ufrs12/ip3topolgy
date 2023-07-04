@@ -7,11 +7,11 @@ export class Display {
     y:          number;
 
     constructor() {
-        this.camera_x = 59;
-        this.camera_y = 59;
+        this.camera_x =667;
+        this.camera_y = 380.5;
         this.camera_z = 1;
-        this.x = 100;
-        this.y = 100;
+        this.x = 0;
+        this.y = 0;
     }
 }
 

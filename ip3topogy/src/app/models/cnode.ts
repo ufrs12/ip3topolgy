@@ -8,11 +8,11 @@ export class Cnode {
     properties = new Object();
 
     constructor() {
-        this.version = '1.0.0';
+        this.version = '0.3.0';
         this.scope = 'node';
         this.name = 'халлоу';
-        this.category  = '';
-        this.title  = '';
+        this.category  = 'action';
+        this.title  = 'her';
         this.description  = '';
         this.properties = { 
             "ключ1": "значение1",

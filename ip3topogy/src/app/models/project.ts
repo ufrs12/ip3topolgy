@@ -9,16 +9,15 @@ export class Project {
     custom_nodes:   Cnode[] =[];
     
     constructor() {
-        this.version        = '1.0.0';
+        this.version        = '0.3.0';
         this.scope          = 'project';
-        this.selectedTree   = 'халлоу';
 
         let t = new Tree;
         this.trees.push(t);
 
+        this.selectedTree   = t.id;
+
         let a = new Cnode;
-        let b = new Cnode;
         this.custom_nodes.push(a);
-        this.custom_nodes.push(b);
     }
 }
