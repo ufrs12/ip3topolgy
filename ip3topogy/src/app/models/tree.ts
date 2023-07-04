@@ -12,8 +12,6 @@ export class Tree {
     nodes = {};
     display =       new Display();
     
-
-    
     constructor() {
         this.version = '1.0.0';
         this.scope = 'tree';
