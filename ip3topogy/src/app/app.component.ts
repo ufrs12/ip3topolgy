@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cnode } from './models/cnode';
 import { Project } from './models/project';
 import { Tree } from './models/tree';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit{
   as: string = '';
 
   mypr = new Project;
+  constructor(public globalService: GlobalService) {}
 
   ngOnInit(){
     this.a = this.mycnode.name;

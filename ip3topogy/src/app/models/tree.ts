@@ -10,7 +10,7 @@ export class Tree {
     description:    string;
     root:           string = null;
     properties =    new Object();
-    nodes = {};
+    nodes:          Node[];
     display =       new Display();
     
     constructor() {
