@@ -1,6 +1,6 @@
 import { IdgenService } from '../services/idgen.service';
 
-export class Node {
+export class Nod {
     id:             string;
     name:           string;
     title:          string;
@@ -8,6 +8,7 @@ export class Node {
     properties =    new Object();
     display =       new Object();
     children:       string[];
+    
 
     constructor() {
         let id = new IdgenService;

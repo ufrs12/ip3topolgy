@@ -1,6 +1,6 @@
 import { IdgenService } from '../services/idgen.service';
 import { Display } from './display';
-import { Node } from './node';
+import { Nod } from './node';
 
 export class Tree {
     version:        string;
@@ -10,7 +10,7 @@ export class Tree {
     description:    string;
     root:           string = null;
     properties =    new Object();
-    nodes:          Node[];
+    nodes =         new Object();;
     display =       new Display();
     
     constructor() {

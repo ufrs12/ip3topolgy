@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Nod } from 'src/app/models/node';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -26,8 +27,14 @@ export class D3treeComponent {
 
   Load(){
     this.globalService.strtree = document.getElementById('ta').innerHTML;
-    this.onNoClick();
     this.globalService.tree = JSON.parse(this.globalService.strtree);
+    let ns:Nod[] = [];
+    Object.values(this.globalService.tree.nodes).forEach(function(elem) {
+      ns.push(elem);
+    });
+    this.globalService.nodes.length = 0;
+    this.globalService.nodes = this.globalService.nodes.concat(ns);
+    this.onNoClick();
   }
 
   onNoClick(): void {
