@@ -8,12 +8,14 @@ import { MenubarComponent } from './components/menubar/menubar.component';
 import { D3treeComponent } from './components/import/d3tree/d3tree.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ShemaComponent } from './components/shema/shema.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenubarComponent,
-    D3treeComponent
+    D3treeComponent,
+    ShemaComponent
   ],
   imports: [
     BrowserModule,
