@@ -10,6 +10,7 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  opened = true;
   mycnode = new Cnode;
   mytree = new Tree;
   a: string = '';

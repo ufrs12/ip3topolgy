@@ -1,0 +1,6 @@
+.example-container {
+    height: calc(205vh - 115vh);
+}
+mat-drawer{
+    background-color: rgb(32, 43, 49);
+}
