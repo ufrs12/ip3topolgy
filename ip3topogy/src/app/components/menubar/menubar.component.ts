@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { BankelementsComponent } from 'src/app/bankelements/components/bankelements/bankelements.component';
 import { D3treeComponent } from '../import/d3tree/d3tree.component';
 
 @Component({
@@ -12,5 +13,7 @@ export class MenubarComponent {
   openImportTreeDialog() {
     this.dialog.open(D3treeComponent);
   }
-
+  openBankElemsDialog() {
+    this.dialog.open(BankelementsComponent);
+  }
 }

@@ -20,9 +20,9 @@ export class Tree {
         let id = new IdgenService;
         this.id = id.id;
         
-        this.title = '',
+        this.title = '2345243',
         this.description = '',
-        //this.root = null,
+        this.root = null,
 
         this.properties = { 
             "ключ1": "значение1",

@@ -1,0 +1,12 @@
+<H1>Банк компонентов</H1>
+<div *ngFor="let elem of cbankService.cbank">
+    <div style="float: left;"><p>{{elem.name}}</p></div>
+    <div style="float: left;">
+        <ul>
+            <li *ngFor="let nn of elem.nnames">{{nn}}</li>
+        </ul>
+    </div>
+    <div style="float: left; border: 5px;">
+        <svg [innerHTML]="Sanitar(elem.svg)"></svg>
+    </div>
+</div>
