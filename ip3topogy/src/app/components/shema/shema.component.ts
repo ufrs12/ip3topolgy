@@ -42,9 +42,9 @@ export class ShemaComponent implements OnInit{
     for (var { row, r } of this.schemeService.grid.map((row, r) => ({ row, r }))) {
       if (row.length>xsize)
         {xsize = row.length};
-        for (var { cell, c } of row.map((cell, c) => ({ cell, c }))) {  
-
-        }
+      for (var { cell, c } of row.map((cell, c) => ({ cell, c }))) {  
+        this.draw.use(symbols.get(cell.item)).move(c*100, r*100);
+      }
     }
     this.draw.size(xsize*100,ysize*100);
 

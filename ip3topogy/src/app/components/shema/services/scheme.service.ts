@@ -18,15 +18,21 @@ export class SchemeService {
     public globalService: GlobalService) {}
 
   Init() {
-    if(!this.globalService.tree.root){ //выходим, если нет рута
-      return false;
+    if(this.globalService.tree.root){ //выходим, если нет рута
+      this.grid.length = 0;
+      this.grid.push([{xoffset:50,item:'wire'}]);
+      this.Construct(this.globalService.tree.root, 1, 0);
     }
-    this.grid.length = 0;
-    this.grid.push([{xoffset:50,item:'wire'}]);
-    // this.grid[0][0] = {x:50,item:'wire'};
-    // this.grid[1][0] = {x:50,item:'wire'};
-    // this.grid.push([]);
-    // this.grid[2][0] = {x:50,item:'wire'};
-    return false;
+  }
+
+  Construct(p:string, r:number, c:number){
+      let n: string = this.globalService.nodes.find(r => r.id === p).name; //имя(тип) рута
+      let ce: Elem = this.cbankService.cbank.find(e => e.nnames.includes(n)); //svg элемент из банка, соответствующий имени(типу) рута
+      //this.grid.push([{xoffset:50,item:ce.name}]);
+      console.log(ce.name)
+      //this.grid[r][c] = {xoffset:0,item:ce.name};
+      if (!this.grid[r]){this.grid.push([])};
+      this.grid[r][c] = {xoffset:0,item:ce.name};
+      // this.grid[r].push({xoffset:50,item:ce.name});
   }
 }
