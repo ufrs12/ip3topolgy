@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CbankService } from '../../services/cbank.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Elem } from '../../models/element';
 
 @Component({
   selector: 'app-bankelements',
@@ -14,8 +15,8 @@ export class BankelementsComponent{
     public cbankService: CbankService,
     private sanitizer: DomSanitizer) {}
 
-  Sanitar(s:string){
-    this.svg = this.sanitizer.bypassSecurityTrustHtml(s);
+  Sanitar(s:Elem){
+    this.svg = this.sanitizer.bypassSecurityTrustHtml(s.svg + Elem.getText1(s));
     return this.svg;
   }
 }
