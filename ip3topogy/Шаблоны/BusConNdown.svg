@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="Pd.svg"
+   sodipodi:docname="BusConNdown.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,8 +26,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4912879"
-     inkscape:cx="265.54229"
-     inkscape:cy="65.715011"
+     inkscape:cx="190.10414"
+     inkscape:cy="203.85064"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -73,54 +73,22 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.42613;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.99270076"
+       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.42613;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.96923083"
        id="rect8540"
        width="97.573868"
        height="97.573868"
        x="1.2130659"
        y="1.2130659" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.217;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.99270076"
-       d="M 67,98.878505 V 0.13264933"
-       id="path8542"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4.5;stroke-dashoffset:5.0999999;stroke-opacity:0.992701"
-       d="M 89.470833,99.470833 67,80"
-       id="path1956"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:5.1;stroke-opacity:0.99270076"
-       d="M 73.767203,70.646899 67,79.999998 73.767203,70.646899 H 60.232797 L 67,79.999998"
-       id="path1958"
-       sodipodi:nodetypes="cc" />
-    <path
        style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.992701"
-       d="M 67,79.999998 80.855377,99.834373"
-       id="path2160"
+       d="m 30.867549,99.704167 -0.0171,-51.040704"
+       id="path2252"
        sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4.5;stroke-dashoffset:5.0999999;stroke-opacity:0.992701"
-       d="M 89.48785,0.95528243 67.017131,20.426115"
-       id="path1956-5"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:5.1;stroke-opacity:0.992701"
-       d="m 73.784307,29.779189 -6.767176,-9.353072 6.767176,9.353072 H 60.249928 l 6.767203,-9.353072"
-       id="path1958-3"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.992701"
-       d="M 67.017131,20.426117 80.872438,0.59174243"
-       id="path2160-2"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.992701"
-       d="M 80.872437,0.59174242 80.855377,99.834371"
-       id="path2252" />
-    <path
-       style="fill:none;stroke:#1f2607;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4.5;stroke-opacity:0.992701;stroke-dashoffset:0"
-       d="M 89.470832,99.470831 89.48785,0.95528243"
-       id="path2254" />
+    <circle
+       style="fill:#1f2607;fill-opacity:0.968627;stroke:none;stroke-width:1.01536;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.04608;stroke-dashoffset:3.45222;stroke-opacity:0.992701"
+       id="path5891-9"
+       cx="30.858999"
+       cy="48.638283"
+       r="3" />
   </g>
 </svg>
