@@ -28,6 +28,7 @@ export class SchemeService {
 
   Init() {
     if(this.globalService.tree.root){ //выходим, если нет рута
+      this.xoff = 0;
       this.grid.length = 0;
 
       if (!this.grid[0]){this.grid.push([])};
@@ -50,6 +51,26 @@ export class SchemeService {
         if (cell.item == 'wire'){
           cell.wiree = this.grid[r+1][c].wireb;
           cell.wireb = this.grid[r-1][c].wiree;
+          //маркировка наличия нуля в основном проводе без ответвлений
+          if (cell.wireb.filter(x => cell.wiree.includes(x)).filter(x => ['N'].includes(x)).length > 0) {
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMN').svg;
+          }
+          //маркировка наличия защитного проводника в основном проводе без ответвлений
+          if (cell.wireb.filter(x => cell.wiree.includes(x)).filter(x => ['PE'].includes(x)).length > 0) {
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMPE').svg;
+          }
+
+          //маркировка текста фаз на основных проводниках
+          let phase:string[] = cell.wiree.filter(e => !['N','PE'].includes(e));
+          for (var p = phase.length-1; p >=0; p--) {
+            cell.fsvg += '<text x="45" y="'+ (60 - (phase.length-p)*9) +'" style="font: italic 11px sans-serif; fill:#'+this.cbankService.cl+';">' + phase[p] + '</text>';
+          }
+          //маркировка фазных насечек на основных проводниках
+          let markL:string = phase.join('').replace(/[1-3]/g,"")
+          if(this.cbankService.cbank.find(e => e.name =='wireM' + markL,"")){
+             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireM' + cell.wiree.filter(e => !['N','PE'].includes(e)).join('').replace(/[1-3]/g,"")).svg;
+          }
+          //отрисовка основных проводов
           if (this.grid[r-1][c].wiree.length > 0 && cell.wiree.length > 0 ){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wire').svg;
           }
@@ -57,12 +78,14 @@ export class SchemeService {
           let difference = cell.wiree.filter(x => !cell.wireb.includes(x));
           if (difference.includes('N')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireNup').svg;
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMN').svg;
             this.grid[r-1][c].wn = true;
             cell.wn = true; //для отрисовки шины
           }
 
           if (difference.includes('PE')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wirePEup').svg;
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMPE').svg;
             this.grid[r-1][c].wp = true;
             cell.wp = true; //для отрисовки шины
           }
@@ -70,6 +93,7 @@ export class SchemeService {
           difference = cell.wireb.filter(x => !cell.wiree.includes(x));
           if (difference.includes('N')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireNdown').svg;
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMN').svg;
           }else{
             if (this.grid[r+1][c].wn){
               cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireN').svg;
@@ -79,6 +103,7 @@ export class SchemeService {
 
           if (difference.includes('PE')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wirePEdown').svg;
+            cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMPE').svg;
           }else{
             if (this.grid[r+1][c].wp){
               cell.fsvg += this.cbankService.cbank.find(e => e.name =='wirePE').svg;
@@ -101,6 +126,7 @@ export class SchemeService {
           cell.fsvg += this.cbankService.cbank.find(e => e.name =='busLd').svg;
           if (c==0){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busLu').svg;
+            cell.fsvg += '<text x="5" y="'+ (this.cbankService.bly - 5) +'" style="font: italic 12px sans-serif; fill:#'+this.cbankService.cl+';">' + cell.wireb.filter(e => !['N','PE'].includes(e)).join() + '</text>';
             if(cell.wn){
               cell.fsvg += this.cbankService.cbank.find(e => e.name =='busNu').svg;
             }
@@ -198,8 +224,12 @@ export class SchemeService {
         } 
         r++;
       }
-      for (var ch of childs) {
+      if (childs.length>1){
         this.xoff = -50;
+      }
+      for (var ch of childs) {
+        
+        // this.xoff = -50;
         this.Construct(ch, r, c);
         c++;
       }
