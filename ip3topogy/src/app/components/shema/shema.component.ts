@@ -62,7 +62,13 @@ export class ShemaComponent{
   Draw() {
     document.querySelector('#sss').innerHTML = '';
     this.draw = SVG().addTo('#sss');
-
+    
+    var style = this.draw.style();
+    console.log(this.cbankService.gstyles);
+    for (let [key, value] of  this.cbankService.gstyles) { // перебираем глобальные стили
+      style.rule(key, value);
+    }
+    
     this.schemeService.Init();
 
     let xsize:number = 0;
