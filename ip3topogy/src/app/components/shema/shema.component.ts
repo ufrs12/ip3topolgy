@@ -3,6 +3,9 @@ import { Svg, SVG, Symbol } from '@svgdotjs/svg.js';
 import { CbankService } from 'src/app/bankelements/services/cbank.service';
 import { GlobalService } from 'src/app/services/global.service';
 import { SchemeService } from './services/scheme.service';
+import * as htmlToImage from 'html-to-image';
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+import download from "downloadjs";
 
 @Component({
   selector: 'app-shema',
@@ -15,11 +18,50 @@ export class ShemaComponent{
   constructor(
     public cbankService: CbankService,
     public globalService: GlobalService,
-    public schemeService: SchemeService) {}
+    public schemeService: SchemeService) {
+
+  }
+  
+
+  Convert(){
+
+    // var node = document.getElementById('svg');
+
+    // htmlToImage.toPng(node)
+    //   .then(function (dataUrl) {
+    //   var img = new Image();
+    //   img.src = dataUrl;
+    //   document.body.appendChild(img);
+    //   })
+    //   .catch(function (error) {
+    //   console.error('oops, something went wrong!', error);
+    // });
+
+    htmlToImage.toPng(document.getElementById('svg'))
+  .then(function (dataUrl) {
+    download(dataUrl, 'my-node.png');
+  });
+
+
+  }
+
+
+  ToSVG(){
+    function filter (node) {
+      return (node.tagName !== 'i');
+    }
+    htmlToImage.toSvg(document.getElementById('super'), { filter: filter 
+    })
+     .then(function (dataUrl) {
+       let svg = decodeURIComponent(dataUrl.split(',')[1])
+       console.log(svg);
+       document.getElementById('svg').innerHTML = svg          
+     });
+  }
 
   Draw() {
-    document.querySelector('#someId').innerHTML = '';
-    this.draw = SVG().addTo('#someId');
+    document.querySelector('#sss').innerHTML = '';
+    this.draw = SVG().addTo('#sss');
 
     this.schemeService.Init();
 
