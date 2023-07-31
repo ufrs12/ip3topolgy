@@ -1,0 +1,207 @@
+{
+    "version": "0.3.0",
+    "scope": "tree",
+    "id": "1e2b95e4-1160-441f-bd3d-c06ba4e4fab4",
+    "title": "Tree",
+    "description": "",
+    "root": "431b6302-5a28-47f9-889e-4dacd55c7b9f",
+    "properties": {
+      "P1": "L1",
+      "P2": "N",
+      "P3": "PE",
+      "P4": "",
+      "P5": ""
+    },
+    "nodes": {
+      "431b6302-5a28-47f9-889e-4dacd55c7b9f": {
+        "id": "431b6302-5a28-47f9-889e-4dacd55c7b9f",
+        "name": "Auto 1P",
+        "title": "1QF",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "nominal": ""
+        },
+        "display": {
+          "x": -36,
+          "y": -144
+        },
+        "children": [
+          "ba34479a-6d1e-4e48-815a-713f1301b0e4",
+          "9c7643f4-507f-4380-9c76-e3421f035cae",
+          "57daac0a-daf3-46f7-8642-8cdc08d548d4"
+        ]
+      },
+      "ba34479a-6d1e-4e48-815a-713f1301b0e4": {
+        "id": "ba34479a-6d1e-4e48-815a-713f1301b0e4",
+        "name": "Auto 1P",
+        "title": "QF1",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "nominal": ""
+        },
+        "display": {
+          "x": 228,
+          "y": -252
+        },
+        "children": [
+          "9a1c09ee-2e76-4281-8bf8-7cf693aabf97"
+        ]
+      },
+      "9c7643f4-507f-4380-9c76-e3421f035cae": {
+        "id": "9c7643f4-507f-4380-9c76-e3421f035cae",
+        "name": "Auto 1P",
+        "title": "QF2",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "nominal": "N"
+        },
+        "display": {
+          "x": 228,
+          "y": -132
+        },
+        "children": [
+          "79374cb6-44de-4671-8fc1-ba0cb1626a12"
+        ]
+      },
+      "57daac0a-daf3-46f7-8642-8cdc08d548d4": {
+        "id": "57daac0a-daf3-46f7-8642-8cdc08d548d4",
+        "name": "Auto 2P",
+        "title": "QF3",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "P2": "N",
+          "nominal": ""
+        },
+        "display": {
+          "x": 228,
+          "y": -24
+        },
+        "children": [
+          "5884b757-3999-4e87-8f04-138586f94163"
+        ]
+      },
+      "5884b757-3999-4e87-8f04-138586f94163": {
+        "id": "5884b757-3999-4e87-8f04-138586f94163",
+        "name": "Motor 1L",
+        "title": "Motor2",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "P2": "N",
+          "P3": "PE"
+        },
+        "display": {
+          "x": 480,
+          "y": -24
+        }
+      },
+      "79374cb6-44de-4671-8fc1-ba0cb1626a12": {
+        "id": "79374cb6-44de-4671-8fc1-ba0cb1626a12",
+        "name": "Motor 1L",
+        "title": "Motor2",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "P2": "N",
+          "P3": "PE"
+        },
+        "display": {
+          "x": 492,
+          "y": -144
+        }
+      },
+      "9a1c09ee-2e76-4281-8bf8-7cf693aabf97": {
+        "id": "9a1c09ee-2e76-4281-8bf8-7cf693aabf97",
+        "name": "Motor 1L",
+        "title": "Motor1",
+        "description": "",
+        "properties": {
+          "P1": "L1",
+          "P2": "N",
+          "P3": "PE"
+        },
+        "display": {
+          "x": 492,
+          "y": -252
+        }
+      }
+    },
+    "display": {
+      "camera_x": 486,
+      "camera_y": 407.5,
+      "camera_z": 0.75,
+      "x": -252,
+      "y": -144
+    },
+    "custom_nodes": [
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Auto 2P",
+        "category": "composite",
+        "title": "QF",
+        "description": null,
+        "properties": {
+          "P1": "",
+          "P2": "",
+          "nominal": ""
+        }
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Auto 1P",
+        "category": "composite",
+        "title": "QF",
+        "description": null,
+        "properties": {
+          "P1": "",
+          "nominal": ""
+        }
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Auto 3P",
+        "category": "composite",
+        "title": "QF",
+        "description": null,
+        "properties": {
+          "P1": "L1",
+          "P2": "L2",
+          "P3": "L3"
+        }
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Motor 3L",
+        "category": "action",
+        "title": "Motor",
+        "description": null,
+        "properties": {
+          "P1": "L1",
+          "P2": "L2",
+          "P3": "L3",
+          "P4": "PE"
+        }
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Motor 1L",
+        "category": "action",
+        "title": "Motor",
+        "description": null,
+        "properties": {
+          "P1": "L1",
+          "P2": "N",
+          "P3": "PE"
+        }
+      }
+    ]
+  }
