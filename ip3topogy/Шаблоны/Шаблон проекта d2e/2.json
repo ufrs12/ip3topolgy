@@ -1,207 +1,468 @@
 {
-    "version": "0.3.0",
-    "scope": "tree",
-    "id": "1e2b95e4-1160-441f-bd3d-c06ba4e4fab4",
-    "title": "Tree",
-    "description": "",
-    "root": "431b6302-5a28-47f9-889e-4dacd55c7b9f",
-    "properties": {
-      "P1": "L1",
-      "P2": "N",
-      "P3": "PE",
-      "P4": "",
-      "P5": ""
-    },
-    "nodes": {
-      "431b6302-5a28-47f9-889e-4dacd55c7b9f": {
-        "id": "431b6302-5a28-47f9-889e-4dacd55c7b9f",
-        "name": "Auto 1P",
-        "title": "1QF",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "nominal": ""
-        },
-        "display": {
-          "x": -36,
-          "y": -144
-        },
-        "children": [
-          "ba34479a-6d1e-4e48-815a-713f1301b0e4",
-          "9c7643f4-507f-4380-9c76-e3421f035cae",
-          "57daac0a-daf3-46f7-8642-8cdc08d548d4"
-        ]
-      },
-      "ba34479a-6d1e-4e48-815a-713f1301b0e4": {
-        "id": "ba34479a-6d1e-4e48-815a-713f1301b0e4",
-        "name": "Auto 1P",
-        "title": "QF1",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "nominal": ""
-        },
-        "display": {
-          "x": 228,
-          "y": -252
-        },
-        "children": [
-          "9a1c09ee-2e76-4281-8bf8-7cf693aabf97"
-        ]
-      },
-      "9c7643f4-507f-4380-9c76-e3421f035cae": {
-        "id": "9c7643f4-507f-4380-9c76-e3421f035cae",
-        "name": "Auto 1P",
-        "title": "QF2",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "nominal": "N"
-        },
-        "display": {
-          "x": 228,
-          "y": -132
-        },
-        "children": [
-          "79374cb6-44de-4671-8fc1-ba0cb1626a12"
-        ]
-      },
-      "57daac0a-daf3-46f7-8642-8cdc08d548d4": {
-        "id": "57daac0a-daf3-46f7-8642-8cdc08d548d4",
-        "name": "Auto 2P",
-        "title": "QF3",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "P2": "N",
-          "nominal": ""
-        },
-        "display": {
-          "x": 228,
-          "y": -24
-        },
-        "children": [
-          "5884b757-3999-4e87-8f04-138586f94163"
-        ]
-      },
-      "5884b757-3999-4e87-8f04-138586f94163": {
-        "id": "5884b757-3999-4e87-8f04-138586f94163",
-        "name": "Motor 1L",
-        "title": "Motor2",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "P2": "N",
-          "P3": "PE"
-        },
-        "display": {
-          "x": 480,
-          "y": -24
-        }
-      },
-      "79374cb6-44de-4671-8fc1-ba0cb1626a12": {
-        "id": "79374cb6-44de-4671-8fc1-ba0cb1626a12",
-        "name": "Motor 1L",
-        "title": "Motor2",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "P2": "N",
-          "P3": "PE"
-        },
-        "display": {
-          "x": 492,
-          "y": -144
-        }
-      },
-      "9a1c09ee-2e76-4281-8bf8-7cf693aabf97": {
-        "id": "9a1c09ee-2e76-4281-8bf8-7cf693aabf97",
-        "name": "Motor 1L",
-        "title": "Motor1",
-        "description": "",
-        "properties": {
-          "P1": "L1",
-          "P2": "N",
-          "P3": "PE"
-        },
-        "display": {
-          "x": 492,
-          "y": -252
-        }
+  "version": "0.3.0",
+  "scope": "project",
+  "selectedTree": "1e2b95e4-1160-441f-bd3d-c06ba4e4fab4",
+  "trees": [
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "9af0b110-2fa4-4fed-8b40-efab82d4bc5f",
+      "title": "TreeEmpty",
+      "description": "",
+      "root": null,
+      "properties": {},
+      "nodes": {},
+      "display": {
+        "camera_x": 960,
+        "camera_y": 453,
+        "camera_z": 1,
+        "x": -468,
+        "y": -96
       }
     },
-    "display": {
-      "camera_x": 486,
-      "camera_y": 407.5,
-      "camera_z": 0.75,
-      "x": -252,
-      "y": -144
-    },
-    "custom_nodes": [
-      {
-        "version": "0.3.0",
-        "scope": "node",
-        "name": "Auto 2P",
-        "category": "composite",
-        "title": "QF",
-        "description": null,
-        "properties": {
-          "P1": "",
-          "P2": "",
-          "nominal": ""
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "1e2b95e4-1160-441f-bd3d-c06ba4e4fab4",
+      "title": "ЩС-1",
+      "description": "",
+      "root": "8a01dc7e-b2d3-445a-9504-86c6feaed836",
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3",
+        "P4": "N",
+        "P5": "PE"
+      },
+      "nodes": {
+        "2222daa7-4964-4697-962d-5a89538c7cd6": {
+          "id": "2222daa7-4964-4697-962d-5a89538c7cd6",
+          "name": "Auto 3P",
+          "title": "QF1",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3",
+            "nominal": "C16"
+          },
+          "display": {
+            "x": 384,
+            "y": -204
+          },
+          "children": [
+            "04882b7f-557a-49e3-bdc1-2606733d34da"
+          ]
+        },
+        "ef5a4b78-2b9c-4088-91e5-278d7811e4b1": {
+          "id": "ef5a4b78-2b9c-4088-91e5-278d7811e4b1",
+          "name": "Auto 1P",
+          "title": "QF2.1",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "nominal": ""
+          },
+          "display": {
+            "x": 552,
+            "y": -120
+          },
+          "children": [
+            "76b934e8-c759-4f36-a0a9-220049a8bbc5"
+          ]
+        },
+        "04882b7f-557a-49e3-bdc1-2606733d34da": {
+          "id": "04882b7f-557a-49e3-bdc1-2606733d34da",
+          "name": "Auto 3P",
+          "title": "QF1.1",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3"
+          },
+          "display": {
+            "x": 564,
+            "y": -204
+          },
+          "children": [
+            "3fe2c350-3d44-4210-8d19-e6bd5dadf4fc"
+          ]
+        },
+        "3fe2c350-3d44-4210-8d19-e6bd5dadf4fc": {
+          "id": "3fe2c350-3d44-4210-8d19-e6bd5dadf4fc",
+          "name": "Motor 3L",
+          "title": "M1",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3",
+            "P4": "PE"
+          },
+          "display": {
+            "x": 756,
+            "y": -204
+          }
+        },
+        "76b934e8-c759-4f36-a0a9-220049a8bbc5": {
+          "id": "76b934e8-c759-4f36-a0a9-220049a8bbc5",
+          "name": "Motor 1L",
+          "title": "M2",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "N",
+            "P3": "PE"
+          },
+          "display": {
+            "x": 756,
+            "y": -120
+          }
+        },
+        "884dfa3c-8e71-4317-8047-70d1316db1ec": {
+          "id": "884dfa3c-8e71-4317-8047-70d1316db1ec",
+          "name": "Auto 1P",
+          "title": "QF3",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "nominal": ""
+          },
+          "display": {
+            "x": 384,
+            "y": -24
+          },
+          "children": [
+            "f2477b3f-d051-4641-8e7e-30fbab18c5f5"
+          ]
+        },
+        "e501c27a-10b7-4434-b5ad-8de95301c1d8": {
+          "id": "e501c27a-10b7-4434-b5ad-8de95301c1d8",
+          "name": "Motor 1L",
+          "title": "M3",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "N",
+            "P3": "PE"
+          },
+          "display": {
+            "x": 756,
+            "y": -24
+          }
+        },
+        "239219cc-9c9e-404e-8c68-b49623c883dc": {
+          "id": "239219cc-9c9e-404e-8c68-b49623c883dc",
+          "name": "Auto 2P",
+          "title": "QF2",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "N",
+            "nominal": ""
+          },
+          "display": {
+            "x": 384,
+            "y": -120
+          },
+          "children": [
+            "ef5a4b78-2b9c-4088-91e5-278d7811e4b1"
+          ]
+        },
+        "1c89cb9b-84a1-4453-a10f-d3eb31f2b40a": {
+          "id": "1c89cb9b-84a1-4453-a10f-d3eb31f2b40a",
+          "name": "Diff 4P",
+          "title": "DF4",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3",
+            "P4": ""
+          },
+          "display": {
+            "x": 384,
+            "y": 72
+          },
+          "children": [
+            "fca771fc-b272-414b-8e8d-418ed5bf6c76"
+          ]
+        },
+        "f003acfd-3387-42b7-83d2-76e7b5512c99": {
+          "id": "f003acfd-3387-42b7-83d2-76e7b5512c99",
+          "name": "Motor 3L",
+          "title": "M4",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3",
+            "P4": "PE"
+          },
+          "display": {
+            "x": 744,
+            "y": 72
+          }
+        },
+        "75d3c364-0127-4982-9d55-182ad0052191": {
+          "id": "75d3c364-0127-4982-9d55-182ad0052191",
+          "name": "Diff 2P",
+          "title": "DF5",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "N"
+          },
+          "display": {
+            "x": 384,
+            "y": 156
+          },
+          "children": [
+            "bee6dbf9-608d-4e99-8c4a-fd88d5a06f21"
+          ]
+        },
+        "bee6dbf9-608d-4e99-8c4a-fd88d5a06f21": {
+          "id": "bee6dbf9-608d-4e99-8c4a-fd88d5a06f21",
+          "name": "Motor 1L",
+          "title": "M5",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "N",
+            "P3": "PE"
+          },
+          "display": {
+            "x": 576,
+            "y": 156
+          }
+        },
+        "f2477b3f-d051-4641-8e7e-30fbab18c5f5": {
+          "id": "f2477b3f-d051-4641-8e7e-30fbab18c5f5",
+          "name": "KM 1P",
+          "title": "KM3",
+          "description": "",
+          "properties": {
+            "P1": "L1"
+          },
+          "display": {
+            "x": 528,
+            "y": -24
+          },
+          "children": [
+            "e501c27a-10b7-4434-b5ad-8de95301c1d8"
+          ]
+        },
+        "fca771fc-b272-414b-8e8d-418ed5bf6c76": {
+          "id": "fca771fc-b272-414b-8e8d-418ed5bf6c76",
+          "name": "KM 3P",
+          "title": "KM4",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3"
+          },
+          "display": {
+            "x": 528,
+            "y": 72
+          },
+          "children": [
+            "f003acfd-3387-42b7-83d2-76e7b5512c99"
+          ]
+        },
+        "d00e15f5-c918-4382-96c7-e672f5af08f8": {
+          "id": "d00e15f5-c918-4382-96c7-e672f5af08f8",
+          "name": "Counter 4P",
+          "title": "Wh",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3",
+            "P4": "N"
+          },
+          "display": {
+            "x": 24,
+            "y": -144
+          },
+          "children": [
+            "2222daa7-4964-4697-962d-5a89538c7cd6",
+            "239219cc-9c9e-404e-8c68-b49623c883dc",
+            "884dfa3c-8e71-4317-8047-70d1316db1ec",
+            "1c89cb9b-84a1-4453-a10f-d3eb31f2b40a",
+            "75d3c364-0127-4982-9d55-182ad0052191"
+          ]
+        },
+        "8a01dc7e-b2d3-445a-9504-86c6feaed836": {
+          "id": "8a01dc7e-b2d3-445a-9504-86c6feaed836",
+          "name": "Auto 3P",
+          "title": "QF",
+          "description": "",
+          "properties": {
+            "P1": "L1",
+            "P2": "L2",
+            "P3": "L3"
+          },
+          "display": {
+            "x": -120,
+            "y": -144
+          },
+          "children": [
+            "d00e15f5-c918-4382-96c7-e672f5af08f8"
+          ]
         }
       },
-      {
-        "version": "0.3.0",
-        "scope": "node",
-        "name": "Auto 1P",
-        "category": "composite",
-        "title": "QF",
-        "description": null,
-        "properties": {
-          "P1": "",
-          "nominal": ""
-        }
-      },
-      {
-        "version": "0.3.0",
-        "scope": "node",
-        "name": "Auto 3P",
-        "category": "composite",
-        "title": "QF",
-        "description": null,
-        "properties": {
-          "P1": "L1",
-          "P2": "L2",
-          "P3": "L3"
-        }
-      },
-      {
-        "version": "0.3.0",
-        "scope": "node",
-        "name": "Motor 3L",
-        "category": "action",
-        "title": "Motor",
-        "description": null,
-        "properties": {
-          "P1": "L1",
-          "P2": "L2",
-          "P3": "L3",
-          "P4": "PE"
-        }
-      },
-      {
-        "version": "0.3.0",
-        "scope": "node",
-        "name": "Motor 1L",
-        "category": "action",
-        "title": "Motor",
-        "description": null,
-        "properties": {
-          "P1": "L1",
-          "P2": "N",
-          "P3": "PE"
-        }
+      "display": {
+        "camera_x": 486,
+        "camera_y": 407.5,
+        "camera_z": 0.75,
+        "x": -252,
+        "y": -144
       }
-    ]
-  }
+    }
+  ],
+  "custom_nodes": [
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Auto 2P",
+      "category": "composite",
+      "title": "QF",
+      "description": null,
+      "properties": {
+        "P1": "",
+        "P2": "",
+        "nominal": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Auto 1P",
+      "category": "composite",
+      "title": "QF",
+      "description": null,
+      "properties": {
+        "P1": "",
+        "nominal": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Auto 3P",
+      "category": "composite",
+      "title": "QF",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Motor 3L",
+      "category": "action",
+      "title": "Motor",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3",
+        "P4": "PE"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Motor 1L",
+      "category": "action",
+      "title": "Motor",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "N",
+        "P3": "PE"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Diff 4P",
+      "category": "composite",
+      "title": "DF",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3",
+        "P4": "N"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Diff 2P",
+      "category": "composite",
+      "title": "DF",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "N"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "KM 1P",
+      "category": "composite",
+      "title": "KM",
+      "description": null,
+      "properties": {
+        "P1": "L1"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "KM 3P",
+      "category": "composite",
+      "title": "KM",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Counter 1P",
+      "category": "composite",
+      "title": "Wh",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Counter 4P",
+      "category": "composite",
+      "title": "Wh",
+      "description": null,
+      "properties": {
+        "P1": "L1",
+        "P2": "L2",
+        "P3": "L3",
+        "P4": "N"
+      }
+    }
+  ]
+}
