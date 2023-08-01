@@ -16,4 +16,5 @@ export class MenubarComponent {
   openBankElemsDialog() {
     this.dialog.open(BankelementsComponent);
   }
+  
 }
