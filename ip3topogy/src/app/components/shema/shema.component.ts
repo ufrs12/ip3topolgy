@@ -20,51 +20,20 @@ export class ShemaComponent{
     public globalService: GlobalService,
     public schemeService: SchemeService) {
 
+    this.globalService.$idtree.subscribe((id: string) => this.Draw());
   }
   
 
-  Convert(){
-
-    // var node = document.getElementById('svg');
-
-    // htmlToImage.toPng(node)
-    //   .then(function (dataUrl) {
-    //   var img = new Image();
-    //   img.src = dataUrl;
-    //   document.body.appendChild(img);
-    //   })
-    //   .catch(function (error) {
-    //   console.error('oops, something went wrong!', error);
-    // });
-
-    htmlToImage.toPng(document.getElementById('svg'))
-  .then(function (dataUrl) {
-    download(dataUrl, 'my-node.png');
-  });
-
-
-  }
-
-
-  ToSVG(){
-    function filter (node) {
-      return (node.tagName !== 'i');
-    }
-    htmlToImage.toSvg(document.getElementById('super'), { filter: filter 
-    })
-     .then(function (dataUrl) {
-       let svg = decodeURIComponent(dataUrl.split(',')[1])
-       console.log(svg);
-       document.getElementById('svg').innerHTML = svg          
-     });
+  Dload(){
+    download(document.querySelector('#sss').innerHTML, this.globalService.tree.title + '.svg');
   }
 
   Draw() {
     document.querySelector('#sss').innerHTML = '';
+    
     this.draw = SVG().addTo('#sss');
     
     var style = this.draw.style();
-    console.log(this.cbankService.gstyles);
     for (let [key, value] of  this.cbankService.gstyles) { // перебираем глобальные стили
       style.rule(key, value);
     }
@@ -80,7 +49,6 @@ export class ShemaComponent{
       for (var { cell, c } of row.map((cell, c) => ({ cell, c }))) {  
         if (cell.fsvg){
           var symb = this.draw.symbol();
-          console.log(r + "  " +c)
           symb.svg(cell.fsvg);
           this.draw.use(symb).move(c*100+100 + cell.xoffset, r*100);
         }

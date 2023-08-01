@@ -3,6 +3,9 @@ import { Display } from './display';
 import { Nod } from './node';
 
 export class Tree {
+  asObservable() {
+    throw new Error('Method not implemented.');
+  }
     version:        string;
     scope:          string;
     id:             string;

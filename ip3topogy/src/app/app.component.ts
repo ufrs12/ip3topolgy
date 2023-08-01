@@ -22,8 +22,5 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     this.a = this.mycnode.name;
     this.as = JSON.stringify(this.mycnode);
-    console.log(this.as);
-    console.log(this.mycnode.properties);
-    console.log(JSON.stringify(this.mypr));
   }
 }

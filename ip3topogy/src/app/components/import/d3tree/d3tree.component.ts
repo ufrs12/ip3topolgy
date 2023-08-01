@@ -26,7 +26,7 @@ export class D3treeComponent {
   }
 
   Load(){
-    this.globalService.strtree = document.getElementById('ta').innerHTML;
+    this.globalService.strtree = (document.getElementById('ta') as HTMLInputElement).value;
     this.globalService.tree = JSON.parse(this.globalService.strtree);
     let ns:Nod[] = [];
     Object.values(this.globalService.tree.nodes).forEach(function(elem) {
@@ -34,6 +34,7 @@ export class D3treeComponent {
     });
     this.globalService.nodes.length = 0;
     this.globalService.nodes = this.globalService.nodes.concat(ns);
+    this.globalService.SetIdtree(this.globalService.tree.title);
     this.onNoClick();
   }
 

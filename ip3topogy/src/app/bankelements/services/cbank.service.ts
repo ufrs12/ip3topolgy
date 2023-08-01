@@ -6,7 +6,7 @@ import { Elem } from '../models/element';
   providedIn: 'root'
 })
 export class CbankService {
-  gstyles = new Map();  //глобальные стили
+  gstyles = new Map();  //стили
   cbank:Elem[] = [];
   //Проводники
   wlw:number = 2.217;   //толщина фазного провода
@@ -26,11 +26,13 @@ export class CbankService {
   bny:number = 48;      //высота расположения нулевой шины
   bpy:number = 59;      //высота расположения защитной шины
   //Элементы
-  uy:number = 21;       //верхняя точка разъеденителя
-  dy:number = 50;       //нижняя точка разъеденителя
+  uy:number = 21;       //верхняя точка разъединителя
+  dy:number = 50;       //нижняя точка разъединителя
 
   constructor() { 
-
+/////////////
+//  Стили  //
+/////////////
     //стили основных линий
     this.gstyles.set('path', new Object({
       'fill'              :'none',        //заливка
@@ -131,8 +133,10 @@ export class CbankService {
       'fill'              :'#' + this.cl, //заливка
       'stroke'            :'none',        //цвет обводки
     }));
+////////////////
+//  Элементы  //
+////////////////
 
-    //Проводники
     this.cbank.push({ //основной провод
       name: 'wire',
       nnames: [],
@@ -306,9 +310,9 @@ export class CbankService {
         '<path d="M 67,100.466 V 49.874316"/>'+
         '<path d="M 67,0.68389843 V 21.282"/>'+
         '<rect style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:19.2756;stroke-opacity:1" id="rect30019" width="20.794313" height="27.495136" x="56.60284" y="22.102839" />'+
-        '<path d="M 57,29 H 77" id="path30075" sodipodi:nodetypes="cc" />'+
-        '<text xml:space="preserve" style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.2889px;font-family:Calibri;-inkscape-font-specification:"Calibri Bold Italic";text-align:justify;fill:#1f2607;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:19.2756;stroke-opacity:1" x="58.583858" y="41.399956" id="text30857">'+
-          '<tspan sodipodi:role="line" id="tspan30855" style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.2889px;font-family:Calibri;-inkscape-font-specification:"Calibri Bold Italic";fill:#1f2607;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-opacity:1" x="58.583858" y="41.399956">Wh</tspan></text>',
+        '<path d="M 57,29 H 77" id="path30075"/>'+
+        '<text xml:space="preserve" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.2889px;font-family:Calibri;text-align:justify;fill:#1f2607;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:19.2756;stroke-opacity:1" x="58.583858" y="41.399956" id="text30857">'+
+          '<tspan id="tspan30855" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.2889px;font-family:Calibri;fill:#1f2607;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-opacity:1" x="58.583858" y="41.399956">Wh</tspan></text>',
       tx1: 10,
       ty1: 20,
     })

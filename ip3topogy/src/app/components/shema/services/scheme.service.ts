@@ -7,7 +7,7 @@ import { GlobalService } from 'src/app/services/global.service';
 export interface Cell{
   xoffset?:number;   //смещение
   item?:   string;    //название элемента
-  nod?:    Nod;       //год
+  nod?:    Nod;       //нод
   fsvg?:   string;    //полный SVG элемента
   wireb?:  string[];  //начало основного провода
   wiree?:  string[];  //конец основного провода
@@ -40,7 +40,6 @@ export class SchemeService {
       this.DrawNodes();
       this.DrawBus();
       this.DrawWires();
-      console.log(this.grid);
     }
   }
 
@@ -126,7 +125,7 @@ export class SchemeService {
           cell.fsvg += this.cbankService.cbank.find(e => e.name =='busLd').svg;
           if (c==0){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busLu').svg;
-            cell.fsvg += '<text x="5" y="'+ (this.cbankService.bly - 5) +'" style="font: italic 12px sans-serif; fill:#'+this.cbankService.cl+';">' + cell.wireb.filter(e => !['N','PE'].includes(e)).join() + '</text>';
+            cell.fsvg += '<text x="5" y="'+ (this.cbankService.bly - 5) +'" style="mt">' + cell.wireb.filter(e => !['N','PE'].includes(e)).join() + '</text>';
             if(cell.wn){
               cell.fsvg += this.cbankService.cbank.find(e => e.name =='busNu').svg;
             }
@@ -139,7 +138,6 @@ export class SchemeService {
           if(this.grid[r+1][c].wn){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busNd').svg;
           }
-          console.log (this.grid[r+1][c].wp);
           if(cell.wp){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busPEd').svg;
           }
@@ -163,7 +161,6 @@ export class SchemeService {
   DrawBus(){
     let phtext:string[] = ['L1', 'L2', 'L3'];
     phtext = phtext.filter(x => this.CheckCont(this.globalService.tree.properties).includes(x));
-    console.log(phtext.join());
     for (var { row, r } of this.grid.map((row, r) => ({ row, r }))) {
       for (var { cell, c } of row.map((cell, c) => ({ cell, c }))) {  
         if (cell.item == 'bus'){
@@ -228,8 +225,6 @@ export class SchemeService {
         this.xoff = -50;
       }
       for (var ch of childs) {
-        
-        // this.xoff = -50;
         this.Construct(ch, r, c);
         c++;
       }

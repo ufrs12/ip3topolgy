@@ -1,23 +1,18 @@
 import { Cnode } from './cnode';
 import { Tree } from './tree';
-
-export class Project {
+export interface data {
     version:        string;
     scope:          string;
     selectedTree:   string;
-    trees:          Tree[] =[];
-    custom_nodes:   Cnode[] =[];
-    
+    trees:          Tree[];
+    custom_nodes:   Cnode[];
+}
+export class Project {
+    name:           string;
+    description:    string;
+    data:           data;
+    path:           string;
+
     constructor() {
-        this.version        = '0.3.0';
-        this.scope          = 'project';
-
-        let t = new Tree;
-        this.trees.push(t);
-
-        this.selectedTree   = t.id;
-
-        let a = new Cnode;
-        this.custom_nodes.push(a);
     }
 }
