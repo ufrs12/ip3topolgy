@@ -36,7 +36,11 @@ export class SchemeService {
         item:'tree', 
         wiree:this.CheckCont(this.globalService.tree.properties),
       };
+
       this.Construct(this.globalService.tree.root, 1, 0);
+      console.log(JSON.parse(JSON.stringify(this.grid)));
+      this.ReConstruct();
+      console.log(JSON.parse(JSON.stringify(this.grid)));
       this.DrawNodes();
       this.DrawBus();
       this.DrawWires();
@@ -48,8 +52,13 @@ export class SchemeService {
       for (var c = this.grid[r].length - 1; c >= 0; c--) {
         let cell:Cell = this.grid[r][c];
         if (cell.item == 'wire'){
-          cell.wiree = this.grid[r+1][c].wireb;
-          cell.wireb = this.grid[r-1][c].wiree;
+          if (cell.wiree == undefined){
+            cell.wiree = this.grid[r+1][c].wireb;
+          }
+          if (cell.wireb == undefined){
+            cell.wireb = this.grid[r-1][c].wiree;
+          }
+          
           //маркировка наличия нуля в основном проводе без ответвлений
           if (cell.wireb.filter(x => cell.wiree.includes(x)).filter(x => ['N'].includes(x)).length > 0) {
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='wireMN').svg;
@@ -210,7 +219,7 @@ export class SchemeService {
       
     let childs = n.children;
     if (typeof childs != 'undefined'){
-      if (childs.length >1){
+      if (childs.length >1 && childs[0] != childs[1]){ //сравнение детей производится из-за бага d3e связанного с дублированием одного и того же нода в детях
         if (!this.grid[r]){this.grid.push([])};
         this.grid[r][c] = {xoffset:this.xoff,item:'wire'};
         r++;
@@ -224,9 +233,34 @@ export class SchemeService {
       if (childs.length>1){
         this.xoff = -50;
       }
-      for (var ch of childs) {
+      for (var ch of childs.filter((val, ind, arr) => arr.indexOf(val) === ind)) {//фильтрация детей производится из-за бага d3e связанного с дублированием одного и того же нода в детях
         this.Construct(ch, r, c);
         c++;
+      }
+    }
+  }
+
+  ReConstruct()
+  {
+    let h:number = this.grid.length;
+    let w:number = 0;
+    console.log('H=' + h);
+    for (var r = 0; r < h ; r++) {
+      if (this.grid[r].length > w){
+        w = this.grid[r].length;
+      }
+      for (var c = 0; c<w; c++) {
+        if (this.grid[r][c] == undefined){
+          let cc:Cell[] = [];
+          this.grid[r][c] = JSON.parse(JSON.stringify(this.grid[r-1][c]));
+          
+          this.grid[r-1].splice(c, 1, {
+            xoffset:-50,
+            fsvg:  this.cbankService.cbank.find(e => e.name =='wire').svg,
+            wireb: this.CheckCont(this.grid[r][c].nod.properties),
+            wiree: this.CheckCont(this.grid[r][c].nod.properties),
+          });
+        }
       }
     }
   }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="грРозеток.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4912879"
+     inkscape:cx="351.03886"
+     inkscape:cy="131.43002"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs2">
+    <symbol
+       id="symbol3307">
+      <use
+         xlink:href="#symbol3174"
+         id="use3180" />
+      <g
+         id="symbol3174"
+         transform="translate(-44.985847,-137.9536)">
+        <rect
+           style="fill:none;stroke:#1f2607;stroke-width:1.15235;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.8"
+           id="rect1641"
+           width="98.847649"
+           height="98.847649"
+           x="44.985847"
+           y="137.9536" />
+        <path
+           style="fill:none;stroke:#1f2607;stroke-width:2.217;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.953846"
+           d="m 94.409672,137.9536 v 31.48188"
+           id="path2430"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#1f2607;stroke-width:2.217;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.953846"
+           d="M 94.409672,236.80124 V 200.83871"
+           id="path2432" />
+        <path
+           style="fill:none;stroke:#1f2607;stroke-width:2.217;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.953846"
+           d="M 94.409672,169.43548 75.758063,196.2258"
+           id="path2434" />
+      </g>
+    </symbol>
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.42613;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0"
+       id="rect8540"
+       width="97.573868"
+       height="97.573868"
+       x="1.2130659"
+       y="1.2130659" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.217;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 68.1085,1.2130651 68.31762,21.28209"
+       id="path8544"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#1f2607;stroke-width:2.42613;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0"
+       id="rect8540-6"
+       width="97.573868"
+       height="97.573868"
+       x="101.19114"
+       y="1.1884694" />
+    <path
+       style="fill:none;stroke:#1f2607;stroke-width:2.217;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:5.1"
+       id="path6094"
+       sodipodi:type="arc"
+       sodipodi:cx="68.317619"
+       sodipodi:cy="21.479702"
+       sodipodi:rx="21.893467"
+       sodipodi:ry="21.893467"
+       sodipodi:start="0"
+       sodipodi:end="3.1415927"
+       sodipodi:arc-type="slice"
+       d="M 90.211086,21.479702 A 21.893467,21.893467 0 0 1 79.264353,40.440001 21.893467,21.893467 0 0 1 57.370885,40.44 21.893467,21.893467 0 0 1 46.424152,21.479702 h 21.893467 z" />
+    <path
+       style="fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:19.2756;stroke:#1f2607;stroke-opacity:1"
+       d="m 68.302605,43.192086 0.015,21.876937"
+       id="path426" />
+    <path
+       style="fill:none;stroke:#1f2607;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:19.2756;stroke-opacity:1"
+       d="M 46.424151,43.704721 H 90.211086"
+       id="path1090" />
+  </g>
+</svg>
