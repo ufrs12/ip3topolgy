@@ -1,10 +1,12 @@
-<div style="overflow:hidden">
+<div style="overflow:hidden;">
+    <H1>Импрот дерева d3e</H1>
     <input type="file" id ="ff" (change)="showFile()">
-    <br>
+ 
+    <p>Или ведите JSON-текст дерева сюда:</p>
     <textarea style="white-space: nowrap" id ="ta" cols="80" rows="10" #treetext>{{globalService.strtree}}</textarea>
     <br>
-    <button type="button" id="one" class="btn btn-success" (click)="Load()">Импортировать</button>
-    <button type="button" id="two" class="btn btn-danger" (click)="onNoClick()">Отменить</button><hr>
+    <button type="button" id="one" class="btn" (click)="Load()">Импортировать</button>
+    <button type="button" id="two" class="btn" (click)="onNoClick()">Отменить</button><hr>
 </div>
 
 

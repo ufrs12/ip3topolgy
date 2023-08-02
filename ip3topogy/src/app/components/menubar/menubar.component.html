@@ -23,8 +23,13 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                   <li>
-                    <button type="button" class="btn btn-outline-dark" (click)="openImportTreeDialog()">
+                    <button type="button" class="btn btn-outline-dark" style="white-space:nowrap" (click)="openImportTreeDialog()">
                         Импорт дерева d3e
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-outline-dark" style="white-space:nowrap" (click)="Dload()">
+                        Экспорт SVG
                     </button>
                   </li>
                 </ul>

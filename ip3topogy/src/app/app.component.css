@@ -1,6 +1,11 @@
 .example-container {
-    height: calc(205vh - 115vh);
+    height: calc(205vh - 110vh);
 }
 mat-drawer{
     background-color: rgb(32, 43, 49);
+}
+button{
+    border: none;
+    background-color: transparent;
+    position: fixed;
 }

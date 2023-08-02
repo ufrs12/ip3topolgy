@@ -13,7 +13,7 @@
    * This padding sets alignment of the nested nodes.
    */
 .example-tree .mat-nested-tree-node div[role=group] {
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
 /*
@@ -34,8 +34,10 @@ mat-tree-node{
 }
 
 H2{
-  color: blanchedalmond;
+  color: rgb(201, 184, 159);
   font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mat-icon-rtl-mirror{

@@ -22,11 +22,6 @@ export class ShemaComponent{
 
     this.globalService.$idtree.subscribe((id: string) => this.Draw());
   }
-  
-
-  Dload(){
-    download(document.querySelector('#sss').innerHTML, this.globalService.tree.title + '.svg');
-  }
 
   Draw() {
     document.querySelector('#sss').innerHTML = '';

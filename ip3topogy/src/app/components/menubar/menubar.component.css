@@ -4,13 +4,13 @@
 }
 
 .btn-outline-dark{
-    --bs-btn-color: #b6bbc0;
+    --bs-btn-color: rgb(201, 184, 159);
     --bs-btn-border-color: #6c6f7200;
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: rgb(240, 220, 190);
     --bs-btn-hover-bg: #3b3c3d;
     --bs-btn-hover-border-color: #6c6f7200;
     --bs-btn-focus-shadow-rgb: 13,110,253;
-    --bs-btn-active-color: #fff;
+    --bs-btn-active-color: rgb(240, 220, 190);
     --bs-btn-active-bg: #3b3c3d;
     --bs-btn-active-border-color: #6c6f7200;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -25,7 +25,7 @@
 
 .dropdown-menu{
     --bs-body-bg: #31363b;
-    --bs-body-color: #c4c6c7;
+    --bs-body-color: rgb(201, 184, 159);
     --bs-tertiary-bg: #373c42;
     --bs-dropdown-link-active-bg: #484e57;
 }

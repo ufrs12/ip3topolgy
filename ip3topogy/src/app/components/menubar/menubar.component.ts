@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { BankelementsComponent } from 'src/app/bankelements/components/bankelements/bankelements.component';
 import { D3treeComponent } from '../import/d3tree/d3tree.component';
+import download from "downloadjs";
 
 @Component({
   selector: 'app-menubar',
@@ -15,5 +16,8 @@ export class MenubarComponent {
   }
   openBankElemsDialog() {
     this.dialog.open(BankelementsComponent);
+  }
+  Dload() {
+    download(document.querySelector('#sss').innerHTML, 'scheme.svg');
   }
 }
