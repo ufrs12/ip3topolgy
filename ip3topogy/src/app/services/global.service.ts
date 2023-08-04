@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Nod } from '../models/node';
-import { Tree } from '../models/tree';
-import { Project } from '../models/project';
+import { Project, Tree, Nod } from '../models/d3emodel';
 import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GlobalService {
 
+export class GlobalService {
   public project: Project = new Project;
   public strtree: string = '';
   public tree:    Tree = new Tree;
@@ -17,9 +15,5 @@ export class GlobalService {
   $idtree = this.idtree.asObservable();
   SetIdtree(id: string) {
     this.idtree.next(id);
-  }
-
-  constructor() {
-
   }
 }
