@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Elem } from 'src/app/bankelements/models/element';
 import { CbankService } from 'src/app/bankelements/services/cbank.service';
+import { D3eService } from 'src/app/services/d3e.service';
 import { GlobalService } from 'src/app/services/global.service';
 import { Nod } from '../../../models/d3emodel';
 
@@ -24,20 +25,21 @@ export class SchemeService {
 
   constructor(
     public cbankService: CbankService,
-    public globalService: GlobalService) {}
+    public globalService: GlobalService,
+    public d3eserv: D3eService) {}
 
   Init() {
-    if(this.globalService.tree.root){ //выходим, если нет рута
+    if(this.d3eserv.tree.root){ //выходим, если нет рута
       this.xoff = 0;
       this.grid.length = 0;
 
       if (!this.grid[0]){this.grid.push([])};
       this.grid[0][0] = {
         item:'tree', 
-        wiree:this.CheckCont(this.globalService.tree.properties),
+        wiree:this.CheckCont(this.d3eserv.tree.properties),
       };
 
-      this.Construct(this.globalService.tree.root, 1, 0);
+      this.Construct(this.d3eserv.tree.root, 1, 0);
       console.log(JSON.parse(JSON.stringify(this.grid)));
       this.ReConstruct();
       console.log(JSON.parse(JSON.stringify(this.grid)));
@@ -169,7 +171,7 @@ export class SchemeService {
 
   DrawBus(){
     let phtext:string[] = ['L1', 'L2', 'L3'];
-    phtext = phtext.filter(x => this.CheckCont(this.globalService.tree.properties).includes(x));
+    phtext = phtext.filter(x => this.CheckCont(this.d3eserv.tree.properties).includes(x));
     for (var { row, r } of this.grid.map((row, r) => ({ row, r }))) {
       for (var { cell, c } of row.map((cell, c) => ({ cell, c }))) {  
         if (cell.item == 'bus'){
@@ -178,11 +180,11 @@ export class SchemeService {
             cell.wireb = phtext;
             cell.wiree = phtext;
           }
-          if (this.CheckCont(this.globalService.tree.properties).includes('N')){
+          if (this.CheckCont(this.d3eserv.tree.properties).includes('N')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busN').svg;
             cell.wn = true;
           }
-          if (this.CheckCont(this.globalService.tree.properties).includes('PE')){
+          if (this.CheckCont(this.d3eserv.tree.properties).includes('PE')){
             cell.fsvg += this.cbankService.cbank.find(e => e.name =='busPE').svg;
             cell.wp = true;
           }
@@ -207,7 +209,7 @@ export class SchemeService {
   }
 
   Construct(p:string, r:number, c:number){
-    let n:Nod = this.globalService.nodes.find(r => r.id === p); //ищем нод
+    let n:Nod = this.d3eserv.nodes.find(r => r.id === p); //ищем нод
       
     if (!this.grid[r]){this.grid.push([])};
     this.grid[r][c] = {xoffset:this.xoff,item:'wire'};
@@ -251,9 +253,7 @@ export class SchemeService {
       }
       for (var c = 0; c<w; c++) {
         if (this.grid[r][c] == undefined){
-          let cc:Cell[] = [];
           this.grid[r][c] = JSON.parse(JSON.stringify(this.grid[r-1][c]));
-          
           this.grid[r-1].splice(c, 1, {
             xoffset:-50,
             fsvg:  this.cbankService.cbank.find(e => e.name =='wire').svg,
@@ -261,7 +261,7 @@ export class SchemeService {
             wiree: this.CheckCont(this.grid[r][c].nod.properties),
           });
         }
-      }
-    }
+      } 
+    } 
   }
 }
