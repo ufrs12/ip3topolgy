@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Svg, SVG, Symbol } from '@svgdotjs/svg.js';
+import { Component } from '@angular/core';
+import { Svg, SVG } from '@svgdotjs/svg.js';
 import { CbankService } from 'src/app/bankelements/services/cbank.service';
 import { GlobalService } from 'src/app/services/global.service';
 import { SchemeService } from './services/scheme.service';
@@ -17,7 +17,7 @@ export class ShemaComponent{
     public globalService: GlobalService,
     public schemeService: SchemeService) {
 
-    this.globalService.$idtree.subscribe((id: string) => this.Draw());
+    this.globalService.$treeObserv.subscribe((id: string) => this.Draw());
   }
 
   Draw() {

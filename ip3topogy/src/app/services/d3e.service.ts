@@ -16,7 +16,6 @@ export class D3eService {
     if (true){//?нужно сравнение, если браузер, то берем его.
       this.LoadRecentsFrLocStor();
       this.LoadAllProjs();
-      console.log(this.allprojs)
   }}
 
   LoadAllProjs(){
@@ -45,6 +44,7 @@ export class D3eService {
     for (let key in localStorage) {
       if (key.indexOf('-recents') >= 0){
         this.recents = JSON.parse(localStorage.getItem(key));
-        console.log(this.recents)
-  } } }
+      }
+    } 
+  }
 }

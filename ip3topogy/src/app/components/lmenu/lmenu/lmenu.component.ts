@@ -1,7 +1,6 @@
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {MatTreeNestedDataSource, MatTreeModule} from '@angular/material/tree';
-import {Project, Nod} from 'src/app/models/d3emodel';
+import {MatTreeNestedDataSource} from '@angular/material/tree';
 import {D3eService} from 'src/app/services/d3e.service';
 import {GlobalService} from 'src/app/services/global.service';
 
@@ -26,10 +25,9 @@ export class LmenuComponent {
 
   constructor(
     public globalService: GlobalService,
-    public d3eserv: D3eService
-    ) {
-    //инициализация сервиса data3editor
-    d3eserv.Init();
+    public d3eserv: D3eService) {
+    
+    d3eserv.Init();//инициализация сервиса data3editor
     for(let [key, proj] of d3eserv.allprojs) {
       let trnames:FoodNode[] = [];
         for (let index = 0; index < proj.data.trees.length; ++index) {

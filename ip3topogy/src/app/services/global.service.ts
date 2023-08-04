@@ -7,8 +7,8 @@ import { D3eService } from './d3e.service';
 })
 
 export class GlobalService {
-  private idtree = new Subject<string>();
-  $idtree = this.idtree.asObservable();
+  private treeObserv = new Subject<string>();
+  $treeObserv = this.treeObserv.asObservable();
 
   constructor(public d3eserv: D3eService) {}
   
@@ -18,7 +18,7 @@ export class GlobalService {
     this.SetIdtree(this.d3eserv.tree.title);
   }
   SetIdtree(id: string) {
-    this.idtree.next(id);
+    this.treeObserv.next(id);
   }
 }
 function thisSetIdtree(title: string) {
