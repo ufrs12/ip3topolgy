@@ -3,7 +3,7 @@
     <input type="file" id ="ff" (change)="showFile()">
  
     <p>Или ведите JSON-текст дерева сюда:</p>
-    <textarea style="white-space: nowrap" id ="ta" cols="80" rows="10" #treetext>{{globalService.strtree}}</textarea>
+    <textarea style="white-space: nowrap" id ="ta" cols="80" rows="10" #treetext>{{strtree}}</textarea>
     <br>
     <button type="button" id="one" class="btn" (click)="Load()">Импортировать</button>
     <button type="button" id="two" class="btn" (click)="onNoClick()">Отменить</button><hr>

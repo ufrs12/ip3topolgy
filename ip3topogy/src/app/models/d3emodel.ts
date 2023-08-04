@@ -1,3 +1,10 @@
+export class Recent {
+    name:           string;
+    description:    string;
+    path:           string;
+    isOpen:         boolean;
+}
+
 export class Project {
     name:           string;
     description:    string;
@@ -53,5 +60,5 @@ export class Nod {
     description:    string;
     properties =    new Object();
     display =       new Object();
-    children:       string[];
+    children?:       string[];
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Nod } from '../../../models/d3emodel';
 import { GlobalService } from 'src/app/services/global.service';
+import { D3eService } from 'src/app/services/d3e.service';
 
 @Component({
   selector: 'app-d3tree',
@@ -9,9 +10,12 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./d3tree.component.css']
 })
 export class D3treeComponent {
+  strtree:  string;
   
-  constructor(  public globalService: GlobalService,
-                public dialogRef: MatDialogRef<D3treeComponent>,) {}
+  constructor(  
+    public d3eserv: D3eService,
+    public globalService: GlobalService,
+    public dialogRef: MatDialogRef<D3treeComponent>,) {}
 
   showFile() {
     let file = (document.getElementById("ff") as HTMLInputElement).files[0];
@@ -26,15 +30,16 @@ export class D3treeComponent {
   }
 
   Load(){
-    this.globalService.strtree = (document.getElementById('ta') as HTMLInputElement).value;
-    this.globalService.tree = JSON.parse(this.globalService.strtree);
-    let ns:Nod[] = [];
-    Object.values(this.globalService.tree.nodes).forEach(function(elem) {
-      ns.push(elem);
-    });
-    this.globalService.nodes.length = 0;
-    this.globalService.nodes = this.globalService.nodes.concat(ns);
-    this.globalService.SetIdtree(this.globalService.tree.title);
+    this.strtree = (document.getElementById('ta') as HTMLInputElement).value;
+    this.d3eserv.tree = JSON.parse(this.strtree);
+    //let ns:Nod[] = [];
+    //Object.values(this.d3eserv.tree.nodes).forEach(function(elem) {
+    //  ns.push(elem);
+    //});
+    //this.globalService.nodes = this.globalService.nodes.concat(ns);
+
+
+    this.globalService.SetIdtree(this.d3eserv.tree.title);
     this.onNoClick();
   }
 
