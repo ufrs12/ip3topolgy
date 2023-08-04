@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Nod } from '../../../models/d3emodel';
 import { GlobalService } from 'src/app/services/global.service';
 import { D3eService } from 'src/app/services/d3e.service';
 
@@ -32,12 +31,6 @@ export class D3treeComponent {
   Load(){
     this.strtree = (document.getElementById('ta') as HTMLInputElement).value;
     this.d3eserv.tree = JSON.parse(this.strtree);
-    //let ns:Nod[] = [];
-    //Object.values(this.d3eserv.tree.nodes).forEach(function(elem) {
-    //  ns.push(elem);
-    //});
-    //this.globalService.nodes = this.globalService.nodes.concat(ns);
-
 
     this.globalService.SetIdtree(this.d3eserv.tree.title);
     this.onNoClick();

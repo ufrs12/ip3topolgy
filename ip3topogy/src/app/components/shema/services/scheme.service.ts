@@ -6,7 +6,7 @@ import { GlobalService } from 'src/app/services/global.service';
 import { Nod } from '../../../models/d3emodel';
 
 export interface Cell{
-  xoffset?:number;   //смещение
+  xoffset?:number;    //смещение
   item?:   string;    //название элемента
   nod?:    Nod;       //нод
   fsvg?:   string;    //полный SVG элемента

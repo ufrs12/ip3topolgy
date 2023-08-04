@@ -3,9 +3,6 @@ import { Svg, SVG, Symbol } from '@svgdotjs/svg.js';
 import { CbankService } from 'src/app/bankelements/services/cbank.service';
 import { GlobalService } from 'src/app/services/global.service';
 import { SchemeService } from './services/scheme.service';
-import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
-import download from "downloadjs";
 
 @Component({
   selector: 'app-shema',
@@ -25,11 +22,10 @@ export class ShemaComponent{
 
   Draw() {
     document.querySelector('#sss').innerHTML = '';
-    
     this.draw = SVG().addTo('#sss');
     
     var style = this.draw.style();
-    for (let [key, value] of  this.cbankService.gstyles) { // перебираем глобальные стили
+    for (let [key, value] of this.cbankService.gstyles) {//перебираем глобальные стили
       style.rule(key, value);
     }
     

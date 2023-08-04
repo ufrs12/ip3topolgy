@@ -29,13 +29,10 @@ export class D3eService {
   LoadProj(key){
     this.project =  this.allprojs.get(key);
   }
+  
   LoadTreeAndNodes(id:string){
     this.tree =this.project.data.trees.find(tr => tr.id === id);
 
-    //let ns:Nod[] = [];
-    //console.log(this.d3eserv.tree.nodes.values())
-    //ns = Array.from( this.d3eserv.tree.nodes.values() )
-    
     let ns:Nod[] = [];
     Object.values(this.tree.nodes).forEach(function(elem) {
       ns.push(elem);
