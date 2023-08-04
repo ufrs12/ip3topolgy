@@ -1,9 +1,7 @@
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatTreeNestedDataSource, MatTreeModule} from '@angular/material/tree';
-import { Nod } from 'src/app/models/node';
-import { Project } from 'src/app/models/project';
-import { Tree } from 'src/app/models/tree';
+import { Project, Nod } from 'src/app/models/d3emodel';
 import { GlobalService } from 'src/app/services/global.service';
 
 interface FoodNode {

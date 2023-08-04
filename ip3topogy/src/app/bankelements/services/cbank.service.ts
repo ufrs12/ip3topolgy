@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Nod } from 'src/app/models/node';
+import { Nod } from '../../models/d3emodel';
 import { Elem } from '../models/element';
 
 @Injectable({
@@ -407,8 +407,20 @@ export class CbankService {
 
     this.cbank.push({
       name: 'consumer',
-      nnames: ['Consumer'],
-      svg: '<rect width="100" height="100" fill="#ffcc33"></rect>'
+      nnames: ['Consumer 3P', 'Consumer 5P'],
+      svg: '<path d="M '+this.wlx+',0 V '+this.uy+'"/>',
+      tx1: 3,
+      ty1: 40,
+    })
+
+    this.cbank.push({ //тепловое реле
+      name: 'therrel',
+      nnames: ['Thermal Relay 3P'],
+      svg: 
+        '<rect width="38" height="33" x="40" y="20" />'+
+        '<path d="m 67,100 5e-6,-55 H 50 V 28 H 67 V 0"/>',
+        tx1: 10,
+        ty1: 15,
     })
   }
 }

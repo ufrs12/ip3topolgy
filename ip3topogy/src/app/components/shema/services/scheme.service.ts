@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Elem } from 'src/app/bankelements/models/element';
 import { CbankService } from 'src/app/bankelements/services/cbank.service';
-import { Nod } from 'src/app/models/node';
 import { GlobalService } from 'src/app/services/global.service';
+import { Nod } from '../../../models/d3emodel';
 
 export interface Cell{
   xoffset?:number;   //смещение

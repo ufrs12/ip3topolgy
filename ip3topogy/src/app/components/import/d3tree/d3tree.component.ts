@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Nod } from 'src/app/models/node';
+import { Nod } from '../../../models/d3emodel';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
