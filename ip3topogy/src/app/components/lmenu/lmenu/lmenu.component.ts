@@ -37,6 +37,6 @@ export class LmenuComponent {
     }
     this.dataSource.data = this.TREE_DATA;
   }
-
+  
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
 }

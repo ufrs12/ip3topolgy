@@ -1,6 +1,6 @@
 //сервис data3editor
 import { Injectable } from '@angular/core';
-import { Nod, Project, Recent, Tree } from '../models/d3emodel';
+import { Cnode, Nod, Project, Recent, Tree } from '../models/d3emodel';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,73 @@ export class D3eService {
       this.LoadRecentsFrLocStor();
       this.LoadAllProjs();
   }}
+
+  CreateProjLocStor(){
+    
+  }
+
+  CreateProj(){
+    let p = new Project;
+    p = {
+      name: 'Новый проект',
+      description: '',
+      data: {
+        version: '0.3.0',
+        scope: "project",
+        selectedTree: '',
+        trees: this.CreateTrees(),
+        custom_nodes: this.CreateCnodes()
+      },
+      path: this.IdGen()
+    };
+    console.log(this.IdGen());
+    return p;
+  }
+
+  CreateCnodes(){
+    let cnodes:Cnode[] = [];
+    return cnodes;
+  }
+
+  CreateTrees(){
+    let trees:Tree[] = [];
+    trees.push({
+      version:      '0.3.0',
+      scope:        'tree',
+      id:           this.IdGen(),
+      title:        'Electric',
+      description:  '',
+      root:         null,
+      properties:   {},
+      nodes:        {},
+      display:      {
+        "camera_x": 318,
+        "camera_y": 207.5,
+        "camera_z": 0.75,
+        "x": -252,
+        "y": -144
+      } 
+    });
+    return trees;
+  }
+
+  IdGen(){
+    var s = [];
+    var hexDigits = "0123456789abcdef";
+    for (var i = 0; i < 36; i++) {
+      let m = Math.floor(Math.random() * 0x10);
+      s[i] = hexDigits.substring(m, m + 1);
+    }
+    // bits 12-15 of the time_hi_and_version field to 0010
+    s[14] = "4";
+
+    // bits 6-7 of the clock_seq_hi_and_reserved to 01
+    s[19] = hexDigits.substring(((s[19] as any) & 0x3) | 0x8,(((s[19] as any) & 0x3) | 0x8) + 1);
+
+    s[8] = s[13] = s[18] = s[23] = "-";
+
+    return s.join("");
+  }
 
   LoadAllProjs(){
     this.allprojs.clear();
