@@ -1,6 +1,7 @@
 //сервис data3editor
 import { Injectable } from '@angular/core';
 import { Cnode, Nod, Project, Recent, Tree } from '../models/d3emodel';
+import { D3eLocstorService } from './d3e.locstor.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +13,21 @@ export class D3eService {
   public tree:     Tree;
   public nodes:    Nod[] = [];
 
+  constructor(
+    public d3elocstorserv: D3eLocstorService
+  ) {}
+
   Init(){//инициализация 
     if (true){//?нужно сравнение, если браузер, то берем его.
-      this.LoadRecentsFrLocStor();
-      this.LoadAllProjs();
+      this.d3elocstorserv.Init();
+      this.recents = this.d3elocstorserv.LoadRecents();
+      this.allprojs.clear();
+      this.allprojs = this.d3elocstorserv.LoadAllProjs()
   }}
 
   CreateProjLocStor(){
-    
+    this.d3elocstorserv.CreateProj(this.CreateProj());
+    this.Init();
   }
 
   CreateProj(){
@@ -85,17 +93,10 @@ export class D3eService {
     return s.join("");
   }
 
-  LoadAllProjs(){
-    this.allprojs.clear();
-    for(let key in localStorage) {
-      if (key.indexOf('b3projects')==0){
-        this.allprojs.set(key.substring(10), JSON.parse(localStorage.getItem(key)));
-  } } }
-
-  LoadProj(key){
+  LoadProj(key:string){
     this.project =  this.allprojs.get(key);
   }
-  
+
   LoadTreeAndNodes(id:string){
     this.tree =this.project.data.trees.find(tr => tr.id === id);
 
@@ -105,13 +106,5 @@ export class D3eService {
     });
     this.nodes.length = 0;
     this.nodes = this.nodes.concat(ns);
-  }
-
-  LoadRecentsFrLocStor(){
-    for (let key in localStorage) {
-      if (key.indexOf('-recents') >= 0){
-        this.recents = JSON.parse(localStorage.getItem(key));
-      }
-    } 
   }
 }
