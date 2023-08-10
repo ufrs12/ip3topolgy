@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { GlobalService } from 'src/app/services/global.service';
-import { D3eService } from 'src/app/services/d3e.service';
+import { D3eService } from 'src/app/d3elib/d3e.service';
 
 @Component({
   selector: 'app-d3tree',

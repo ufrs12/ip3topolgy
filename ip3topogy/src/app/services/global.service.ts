@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { D3eService } from './d3e.service';
+import { D3eService } from '../d3elib/d3e.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class GlobalService {
     this.treeObserv.next(id);
   }
 }
-function thisSetIdtree(title: string) {
-  throw new Error('Function not implemented.');
-}
+// function thisSetIdtree(title: string) {
+//   throw new Error('Function not implemented.');
+// }
 

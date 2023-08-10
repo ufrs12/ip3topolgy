@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Elem } from 'src/app/bankelements/models/element';
-import { CbankService } from 'src/app/bankelements/services/cbank.service';
-import { D3eService } from 'src/app/services/d3e.service';
+import { CbankService } from 'src/app/services/cbank.service';
+import { D3eService } from 'src/app/d3elib/d3e.service';
 import { GlobalService } from 'src/app/services/global.service';
-import { Nod } from '../../../models/d3emodel';
+import { Nod } from '../d3elib/d3emodel';
 
 export interface Cell{
   xoffset?:number;    //смещение
@@ -200,7 +199,7 @@ export class SchemeService {
           let ce =this.cbankService.cbank.find(e => e.nnames.includes(cell.nod.name));
           cell.fsvg += ce.svg;
           ce.text1 = cell.nod.title;
-          cell.fsvg += Elem.getText1(ce);
+          cell.fsvg += this.cbankService.getText1(ce);
           cell.wireb = this.CheckCont(cell.nod.properties);
           cell.wiree = this.CheckCont(cell.nod.properties)
         }

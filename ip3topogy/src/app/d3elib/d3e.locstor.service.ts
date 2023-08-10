@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project, Recent } from '../models/d3emodel';
+import { Project, Recent } from './d3emodel';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class D3eLocstorService {
   }
 
   CreateProj(p:Project){
-    localStorage.setItem('b3projects-' + p.path, JSON.stringify(p))
+    localStorage.setItem(p.path, JSON.stringify(p))
     let r = this.LoadRecents();
     r.push({
       name:         p.name,

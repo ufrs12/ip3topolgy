@@ -31,9 +31,6 @@ export class Cnode {
 }
 
 export class Tree {
-    // asObservable() {
-    //   throw new Error('Method not implemented.');
-    // }
     version:      string;
     scope:        string;
     id:           string;

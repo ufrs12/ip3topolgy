@@ -7,17 +7,8 @@
     <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08" style="">
         <ul class="navbar-nav">
 
-            <li>
-                <div ngbDropdown class="d-inline-block">
-                    <a routerLink="">
-                        <button type="button" class="btn btn-outline-dark">
-                            Главная
-                        </button>
-                    </a>
-                </div>
-            </li>
-
-            <div class="nav-item dropdown">
+            <!--
+                <div class="nav-item dropdown">
                 <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                   Файл
                 </button>
@@ -33,13 +24,33 @@
                     </button>
                   </li>
                 </ul>
-            </div>
-            
+                </div>
+            -->
             <li>
                 <div ngbDropdown class="d-inline-block">
                     <a routerLink="">
-                        <button type="button" class="btn btn-outline-dark" (click)="openBankElemsDialog()">
-                            Банк компонентов
+                        <button type="button" class="btn btn-outline-dark" style="white-space:nowrap" (click)="Dload()">
+                            Экспорт SVG
+                        </button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div ngbDropdown class="d-inline-block">
+                    <a routerLink="">
+                        <button type="button" class="btn btn-outline-dark" style="white-space:nowrap" (click)="openImportTreeDialog()">
+                            Импорт дерева d3e
+                        </button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div ngbDropdown class="d-inline-block">
+                    <a routerLink="">
+                        <button type="button" class="btn btn-outline-dark" (click)="openAbout()">
+                            О программе
                         </button>
                     </a>
                 </div>

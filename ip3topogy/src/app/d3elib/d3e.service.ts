@@ -1,6 +1,7 @@
 //сервис data3editor
 import { Injectable } from '@angular/core';
-import { Cnode, Nod, Project, Recent, Tree } from '../models/d3emodel';
+import { Cnode, Nod, Project, Recent, Tree } from './d3emodel';
+import { D3eCnodesService } from './d3e.cnodes.service';
 import { D3eLocstorService } from './d3e.locstor.service';
 
 @Injectable({
@@ -14,7 +15,8 @@ export class D3eService {
   public nodes:    Nod[] = [];
 
   constructor(
-    public d3elocstorserv: D3eLocstorService
+    public d3elocstorserv: D3eLocstorService,
+    public d3eCnodesserv: D3eCnodesService
   ) {}
 
   Init(){//инициализация 
@@ -32,17 +34,18 @@ export class D3eService {
 
   CreateProj(){
     let p = new Project;
+    let t:Tree[] = this.CreateTrees();
     p = {
       name: 'Новый проект',
       description: '',
       data: {
         version: '0.3.0',
         scope: "project",
-        selectedTree: '',
-        trees: this.CreateTrees(),
-        custom_nodes: this.CreateCnodes()
+        selectedTree: t[0].id,
+        trees: t,
+        custom_nodes: this.d3eCnodesserv.cnodes
       },
-      path: this.IdGen()
+      path: 'b3projects-' + this.IdGen()
     };
     console.log(this.IdGen());
     return p;

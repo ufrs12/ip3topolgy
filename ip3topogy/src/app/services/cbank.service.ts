@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Nod } from '../../models/d3emodel';
-import { Elem } from '../models/element';
+
+export interface Elem {
+  name:   string;     //Имя
+  nnames: string[];   //Какие типы(имена) нодов изображаются этим элементом
+  svg:    string;     //SVG-чертеж элемента
+  tx1?:   number;     //Координата X первого текста
+  ty1?:   number;     //Координата Y первого текста
+  text1?: string;     //Первый текст
+}
 
 @Injectable({
   providedIn: 'root'
@@ -422,5 +429,8 @@ export class CbankService {
         tx1: 10,
         ty1: 15,
     })
+  }
+  getText1(e:Elem) {
+    return '<text x="' + e.tx1 + '" y="' + e.ty1 +'" style="font-weight:bold;font-size:20px;">' + e.text1 + '</text>';
   }
 }

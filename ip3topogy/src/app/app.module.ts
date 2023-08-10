@@ -14,6 +14,7 @@ import { ShemaComponent } from './components/shema/shema.component';
 import { LmenuComponent } from './components/lmenu/lmenu/lmenu.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BankelementsComponent } from './bankelements/components/bankelements/bankelements.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BankelementsComponent } from './bankelements/components/bankelements/ba
     D3treeComponent,
     ShemaComponent,
     LmenuComponent,
-    BankelementsComponent
+    BankelementsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

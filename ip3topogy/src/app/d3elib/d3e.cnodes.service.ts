@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cnode } from '../models/d3emodel';
+import { Cnode } from './d3emodel';
 
 @Injectable({
   providedIn: 'root'

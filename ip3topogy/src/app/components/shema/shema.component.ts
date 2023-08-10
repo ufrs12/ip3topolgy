@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Svg, SVG } from '@svgdotjs/svg.js';
-import { CbankService } from 'src/app/bankelements/services/cbank.service';
+import { CbankService } from 'src/app/services/cbank.service';
 import { GlobalService } from 'src/app/services/global.service';
-import { SchemeService } from './services/scheme.service';
+import { SchemeService } from '../../services/scheme.service';
 
 @Component({
   selector: 'app-shema',
