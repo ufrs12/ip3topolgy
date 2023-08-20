@@ -13,7 +13,7 @@ export class D3eCnodesService {
       '{"version": "0.3.0", "scope": "node", "name": "Auto 2P", "category": "composite", "title": "QF", "description": null,'+
           '"properties": {"P1": "", "P2": "", "nominal": ""}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Auto 1P", "category": "composite", "title": "QF", "description": null,'+
-          '"properties": {"P1": "", "nominal": ""}},'+
+          '"properties": {"P1": "L1", "nominal": ""}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Auto 3P", "category": "composite", "title": "QF", "description": null,'+
           '"properties": {"P1": "L1", "P2": "L2", "P3": "L3"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Motor 3L", "category": "action", "title": "Motor", "description": null,'+
@@ -29,7 +29,7 @@ export class D3eCnodesService {
       '{"version": "0.3.0", "scope": "node", "name": "KM 3P", "category": "composite", "title": "KM", "description": null,'+
           '"properties": {"P1": "L1", "P2": "L2", "P3": "L3"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Counter 1P", "category": "composite", "title": "Wh", "description": null,'+
-          '"properties": {"P1": "L1", "P2": "L2"}},'+
+          '"properties": {"P1": "L1", "P2": "N"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Counter 4P", "category": "composite", "title": "Wh", "description": null,'+
           '"properties": {"P1": "L1", "P2": "L2", "P3": "L3", "P4": "N"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Light", "category": "action", "title": "grL", "description": null,'+

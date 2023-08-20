@@ -392,9 +392,9 @@ export class CbankService {
       nnames: ['Light'],
       svg: 
         '<path d="M '+this.wlx+',0 V '+this.uy+'"/>'+
-        '<path d="M 52.095594,28.472842 84.50962,57.911329" id="path8544-7" sodipodi:nodetypes="cc" />'+
-        '<circle cx="68.317619" cy="43.175556" r="21.893467" />'+
-        '<path d="M 84.509619,28.472842 52.095594,57.911329" id="path8544-7-9" sodipodi:nodetypes="cc" />',
+        '<path d="M 52.095594,28.472842 84.50962,57.911329"/>'+
+        '<circle cx="68.317619" cy="43.175556" r="21.893467"/>'+
+        '<path d="M 84.509619,28.472842 52.095594,57.911329"/>',
         tx1: 10,
         ty1: 20,
     })
