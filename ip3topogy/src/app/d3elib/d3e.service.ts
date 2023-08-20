@@ -65,14 +65,20 @@ export class D3eService {
       title:        'Electric',
       description:  '',
       root:         null,
-      properties:   {},
+      properties:   {
+        "P1": 'L1',
+        "P2": 'L2',
+        "P3": 'L3',
+        "P4": 'N',
+        "P5": 'PE',
+      },
       nodes:        {},
       display:      {
-        "camera_x": 318,
-        "camera_y": 207.5,
-        "camera_z": 0.75,
-        "x": -252,
-        "y": -144
+        "camera_x": 910.5,
+        "camera_y": 412.5,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
       } 
     });
     return trees;
