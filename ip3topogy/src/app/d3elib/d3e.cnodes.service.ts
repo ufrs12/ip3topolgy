@@ -35,7 +35,7 @@ export class D3eCnodesService {
       '{"version": "0.3.0", "scope": "node", "name": "Light", "category": "action", "title": "grL", "description": null,'+
           '"properties": {"P1": "L1", "P2": "N", "P3": "PE"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Socket 3P", "category": "action", "title": "S", "description": null,'+
-          '"properties": { "P1": "L2", "P2": "N", "P3": "PE"}},'+
+          '"properties": { "P1": "L1", "P2": "N", "P3": "PE"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "Socket 5P", "category": "action", "title": "S", "description": null,'+
           '"properties": {"P1": "L1", "P2": "L2", "P3": "L3", "P4": "N", "P5": "PE"}},'+
       '{"version": "0.3.0", "scope": "node", "name": "FreqConv 3P", "category": "composite", "title": "FC", "description": null,'+
